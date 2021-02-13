@@ -1,0 +1,296 @@
+.container{ 
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to left bottom, 
+        rgb(56 57 58 / 20%), 
+        rgb(88 88 88 / 40%) 
+    );
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    padding: 0px 10px;
+    flex: none;
+}   
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    flex: auto; 
+    height: auto;
+    background: green;
+}
+.sidebar{
+    background-color: brown;
+    width: 10%; 
+}
+main{
+    background-color: blue;
+    width: 100%; 
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+.nav-links > li{
+    padding: 0px 10px;
+}
+ 
+.sidebar-wrapper{
+    padding:10px;
+}
+.sidebar-menu ul{
+    padding: 0px;
+}
+.sidebar-menu ul li{
+    list-style: none;
+}
+.menu-dots{
+    width: 20px;
+    height: 20px;
+}
+.main-wrapper{
+    padding: 10px;
+}
+.main-top-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3vh;
+}
+
+.main-top-left-menu ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-top-left-menu ul > li{
+    list-style: none;
+    padding: 0px 10px;
+}
+
+.main-center{
+
+}
+
+
+
+
+
+
+
+.first-table, 
+.second-table,
+.third-table,
+.fourth-table
+{
+    display: flex;
+    flex-direction: column;
+}
+.first-table .first-table-header,
+.second-table .second-table-header,
+.third-table .third-table-header,
+.fourth-table .fourth-table-header
+{
+    background-color: orange;
+    padding: 5px 10px;
+}
+.first-table .first-table-body,
+.second-table .second-table-body,
+.third-table .third-table-body,
+.fourth-table .fourth-table-body
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.first-table-col-1,
+.second-table-col-1,
+.third-table-col-1
+{
+    background-color: aqua;
+    flex: 3;
+    margin: 5px 5px 0px 0px; 
+}
+
+.fourth-table-col-1{
+    
+    background-color: aqua;
+    flex: 3;
+    
+    margin: 5px 0px 0px 0px; 
+}
+
+.first-table-col-2,
+.second-table-col-2,
+.third-table-col-2,
+.fourth-table-col-2
+{
+    background-color: rgb(22, 56, 45);
+    flex: 1; 
+    margin: 5px 5px 0px 0px;
+}
+
+.first-table-col-3,
+.second-table-col-3,
+.third-table-col-3,
+.fourth-table-col-3
+{
+    background-color: rgb(5, 107, 59);
+    flex: 1;
+    margin: 5px 0px 0px 0px;
+}
+
+.first-table-col-1{
+    padding: 0px 10px;
+}
+ 
+.group-form-first > div{
+    display: inline; 
+}
+.group-form-first{
+    text-align: center;
+}
+
+.group-form-second > div{
+    display: inline;
+}
+.group-form-third > .group-label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.group-form-third > .group-label > label{
+    flex: none;
+}
+.group-form-third > .group-label > input{
+    flex: auto;
+    width: 100%;
+}
+.submit-first-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.first-table-col-2,
+.first-table-col-3{
+    padding: 5px;
+}
+.tb-02{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100px;
+}
+.tb-02-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: none;
+}
+.tb-02-body{
+    flex: auto;
+    height: 100%;
+    background: brown;
+    overflow-y: auto;
+}
+.tb-02-body ul{
+    margin: 0px !important;
+    padding: 0px 10px !important; 
+}
+.tb-02-body ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second-table-header{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.second-table-header > div,
+.second-table-header > button,
+.btn
+{
+    margin: 0px 5px;
+}
+
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-none{
+    flex: none;
+}
+.flex-auto{
+    flex: auto;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-2{
+    flex: 2;
+}
+.flex-3{
+    flex: 3;
+}
+.flex-4{
+    flex: 4;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow-y-auto{
+    overflow-y: auto;
+}
+.h-100px{
+    height: 100px;
+}
+.bg-gray{
+    background: gray;
+}
+table > tbody td{
+    border: 1px solid gray;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.w-1-12{
+    width: 8.333333%;
+}
+.w-100{
+
+}
+.w-auto{
+    width: auto;
+}
+.-rotate-90{
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate( -90deg );
+}

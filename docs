@@ -1,0 +1,93 @@
+composer create-project laravel/laravel --prefer-dist .
+
+ONE TO ONE POLYMORPHIC
+    php artisan make:model Post -fm
+    php artisan make:model Image -m
+
+    POST Migration
+        $table->string('title');
+        $table->text('body');
+
+
+    Image Migration  
+        $table->string('url');
+        $table->unsignedBigInteger('imageable_id');
+        $table->string('imageable_type');
+
+    
+    POST FACTORY  
+        'title'=>$faker->sentence,
+        'body'=>$faker->paragraph
+
+
+    php artisan tinker
+    >>$post = App\Models\Post::factory()->create()
+    >>>exit()
+
+    >>$post = Post::first()
+    >>$post->image()->create(['url'=>'someone/url/image.jpg'])
+
+    
+    **create user**
+    >>\App\Models\User::factory()->create()
+
+    >>$user = User::first()
+    >>$user->image()->create(['url'=>'someone/url/dummy.jpg'])
+
+
+
+One to Many POLYMORPHIC
+    php artisan make:model Comment -m
+
+
+    Comment Migration
+        $table->unsignedBigInteger('commentable_id');
+        $table->string('commentable_type');     
+
+
+    php artisan migrate:rollback
+    php artisan migrate
+    
+ 
+    php artisan tinker
+
+    >>$post = Post::first()
+    >>$post->comments()->create(['body'=>'first cool comment'])
+
+
+    php artisan make:model Video -m
+    
+    Video Migration
+        no added info
+
+    php artisan migrate
+
+
+    php artisan tinker
+    $video = Video::first()
+    $video->comments()->create(['body'=>'First video comment'])
+ 
+Many to Many POLYMORPHIC
+    php artisan make:model Tag -m
+
+    php artisan make:migration creates_taggables_table --create taggables
+    
+
+    CreatesTaggablesTable //no increment table
+        $table->unsignedBigInteger('tag_id');
+        $table->unsignedBigInteger('taggable_id');
+        $table->string('taggable_type');
+    Tag migration
+        string name
+
+
+    php artisan tinker
+    >>$post = Post::first()
+    >>$post->tags()->create(['name'=>'laravel'])
+    
+
+    Video 
+        >>> $video = Video::first()
+        >>> $video->tags()->create(['name'=>'Video Tag'])
+        >>> $video->tags()->create(['name'=>'Video Tag'])
+        >>> $video->tags()->attach(1)
